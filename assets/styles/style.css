@@ -1,9 +1,12 @@
+/* importing font from google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
 }
+
 button {
     cursor: pointer;
     transition: 0.5s;
@@ -42,6 +45,7 @@ body {
     z-index: 3;
 }
 
+/* navigation bar */
 .navLinks {
     justify-content: space-between;
     width: 88%;
@@ -55,7 +59,7 @@ body {
     font-weight: bold;
     color: grey;
     font-size: 17px;
-    transition: 0.5s;
+    transition: 0.5s ;
 }
 
 .logo, .logoResponsive {
@@ -80,6 +84,7 @@ body {
     padding: 1% 0%;
 }
 
+/* To adjust the wide spaces */
 .blankSpace {
     width: 100%;
     height: 17rem;
@@ -130,7 +135,7 @@ body {
     font-family: serif;
     font-size: 45px;
 }
-
+/* separator for dividing heading and content */
 .separator {
     text-align: center;
     padding: 2% 0%;
@@ -171,7 +176,7 @@ body {
 
 .holidayLocations {
     width: 85%;
-    margin: 6% auto;
+    margin: 10% auto;
 }
 
 .locationImage img {
@@ -237,6 +242,7 @@ body {
     width: 21%;
 }
 
+/* tooltips for icons */
 .tooltip {
     visibility: hidden;
     width: 120px;
@@ -262,6 +268,7 @@ body {
     border-color: transparent black transparent transparent;
 }
 
+/* the tooltip will be visible on hover */
 .specialityIcons:hover .tooltip {
     visibility: visible;
 }
@@ -355,6 +362,7 @@ body {
     width: 100%;
 }
 
+/* send button for feedback form */
 .send {
     text-transform: uppercase;
     color: white;
@@ -416,7 +424,6 @@ body {
 /* hover effects */
 .navLinks a:hover {
     cursor: pointer;
-    /* text-decoration: underline 2px solid black ; */
     color: black;
     font-weight: bold;
     -webkit-text-stroke: 1px;
@@ -432,89 +439,12 @@ button:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
 /* Media queries for mobile phones */
 
-@media (min-width:360px) and (max-width:576px) {
+@media (min-width:360px) and (max-width:767px) {
     .homePage {
         background-position: right 53% top 141%;
-    }
-
-    .navigation {
-        justify-content: space-between;
-    }
-
-    .hamburger {
-        display: block;
-        content: "";
-        position: relative;
-        background-color: black;
-        width: 30px;
-        height: 4px;
-        margin: 4%;
-        z-index: 2;
-    }
-
-    .hamburger:before, .hamburger:after {
-        position: absolute;
-        content: "";
-        background-color: black;
-        width: 30px;
-        height: 4px;
-        transition: all 0.5s;
-        left: 0px;
-    }
-
-    .hamburger:before {
-        top: -10px;
-        left: 0px;
-    }
-
-    .hamburger:after {
-        top: 10px;
-        left: 0px;
-    }
-
-    .navigation input:checked~.hamburger {
-        background-color: transparent;
-    }
-
-    .navigation input:checked~.hamburger:before {
-        top: 0;
-        width: 20px;
-        transform: rotate(-45deg);
-        background-color: white;
-    }
-
-    .navigation input:checked~.hamburger:after {
-        top: 0;
-        width: 20px;
-        transform: rotate(45deg);
-        background-color: white;
-    }
-
-    .navLinks {
-        right: 100%;
-    }
-
-    .navigation input:checked~.navLinks {
-        right: 0%;
-    }
-
-    .navLinks {
-        position: absolute;
-        width: 100%;
-        right: 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(114, 194, 226, 0.788);
-        text-align: center;
-        transition: 0.5s;
-    }
-
-    .navLinks a {
-        color: white;
-        padding: 5%;
-        border-bottom: 1px solid rgb(211, 204, 204);
     }
 
     .homeText {
@@ -522,7 +452,8 @@ button:hover {
         font-size: 17px;
     }
 
-    .emptySpace, .locationName, .bookingSection, .logo, .popularDestinations {
+    /* the below divs are hidden in responsive design */
+    .emptySpace, .locationName, .bookingSection, .popularDestinations {
         display: none;
     }
 
@@ -530,22 +461,16 @@ button:hover {
         display: block;
     }
 
-    .logoResponsive {
-        display: block;
-        text-align: center;
-        padding: 2% 3%;
-        width: 32%;
-    }
-
     .locationNameResponsive {
         display: block;
         width: 100%;
         text-align: center;
+        padding: 3% 0%;
     }
 
     .ideas {
         margin: 3% auto;
-        box-shadow: 0px 4px 4px 4px black;
+        box-shadow: 0px 4px 4px 4px black; /* shadow effect for each card */
     }
 
     .ideasImages, .locationCard, .locationInnerCard, .featuresInnerContainer {
@@ -554,6 +479,10 @@ button:hover {
 
     .selectOption, .ideasImages, .ideas, .locationImage, .locationText, .smallImages {
         width: 100%;
+    }
+
+    .locations {
+        text-align: center;
     }
 
     .locationInnerCard {
@@ -615,3 +544,153 @@ button:hover {
         margin: 2% auto;
     }
 }
+
+/* navigation bar for mobile and tablet */
+@media (min-width:360px) and (max-width:1024px) {
+    
+    .navigation {
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logoResponsive {
+        display: block;
+        text-align: center;
+        padding: 2% 3%;
+        width: 32%;
+    }
+    /* navigation button */
+    .hamburger {
+        display: block;
+        content: "";
+        position: relative;
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        margin: 4%;
+        z-index: 2;
+    }
+
+    .hamburger:before, .hamburger:after {
+        position: absolute;
+        content: "";
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition: all 0.5s;
+        left: 0px;
+    }
+
+    .hamburger:before {
+        top: -10px;
+        left: 0px;
+    }
+
+    .hamburger:after {
+        top: 10px;
+        left: 0px;
+    }
+
+    .navigation input:checked~.hamburger {
+        background-color: transparent;
+    }
+
+    /* hamburger to cross sign */
+    .navigation input:checked~.hamburger:before {
+        top: 0;
+        width: 20px;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+
+    /* hamburger to cross sign */
+    .navigation input:checked~.hamburger:after {
+        top: 0;
+        width: 20px;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+
+    .navLinks {
+        right: 100%;
+    }
+
+    .navigation input:checked~.navLinks {
+        right: 0%;
+    }
+
+    .navLinks {
+        position: absolute;
+        width: 100%;
+        right: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(114, 194, 226, 0.788);
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .navLinks a {
+        color: white;
+        padding: 5%;
+        border-bottom: 1px solid rgb(211, 204, 204);
+    }
+}
+
+/* Media query for tablet */
+@media (min-width:768px) and (max-width:1024px) {
+
+    .homepage {
+        background-position: right 54% top 25%;
+    }
+    .beachBtn {
+        padding: 3% 1%;
+    }
+    .groupBtn {
+        padding: 3% 7%;
+    }
+    .cityBtn {
+        padding: 3% 14%;
+    }
+
+    .beachBtn, .groupBtn, .cityBtn {
+        font-size: 18px;
+    }
+    .locationName, .locationDescription {
+        padding: 4% 0%;
+    }
+
+    .locationName {
+        font-size: 12px;
+    }
+    .locationSpeciality {
+        justify-content: space-between;
+    }
+    .specialityIcons {
+        width: 24%;
+    }
+    .bookNowBtn {
+        padding: 3% 5%;
+    }
+    .icon img {
+        padding: 14% 12%;
+    }
+
+    .featureDescription {
+        text-align: justify;
+    }
+
+    .feedbackForm {
+        width: 44%;
+    }
+    .leftFooter {
+        width: 63%;
+    }
+    .popularDestinations {
+        width: 38%;
+    }
+}
+
