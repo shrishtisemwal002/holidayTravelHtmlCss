@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+button {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+body {
+    background-color: #ecf0f1;
+    font-family: 'manrope';
+}
+
+.homePage {
+    background-image: url('../images/home_background.jpg');
+    background-repeat: no-repeat;
+}
+
+.homeImage {
+    width: 100%;
+    height: 100vh;
+}
+
+.navigation, .navLinks {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hamburger, .logoResponsive, .bookServiceNow {
+    display: none;
+}
+
+.nav_menu {
+    position: absolute;
+    width: 53px;
+    height: 4%;
+    opacity: 0;
+    z-index: 3;
+}
+
+.navLinks {
+    justify-content: space-between;
+    width: 88%;
+    margin: auto;
+}
+
+.navLinks a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 2% 1%;
+    font-weight: bold;
+    color: grey;
+    font-size: 17px;
+    transition: 0.5s;
+}
+
+.logo, .logoResponsive {
+    width: 20%;
+    padding: 1.5% 0%;
+}
+
+.logo img, .ideas img, .logoResponsive img {
+    width: 100%;
+}
+
+.homeText {
+    color: white;
+    text-transform: uppercase;
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-size: 26px;
+    word-spacing: 10px;
+    -webkit-text-stroke: 1px;
+    letter-spacing: 3px;
+    padding: 1% 0%;
+}
+
+.blankSpace {
+    width: 100%;
+    height: 17rem;
+}
+
+.bookingSection, .selectOption {
+    display: flex;
+}
+
+.bookingSection {
+    background-color: white;
+    width: 68%;
+    margin: auto;
+    justify-content: space-evenly;
+    font-family: sans-serif;
+    padding: 4% 2%;
+    font-size: 15px;
+    transform: translateY(-45px);
+}
+
+.selectOption {
+    justify-content: space-between;
+    padding: 1% 0%;
+    width: 21%;
+    color: grey;
+    border-bottom: 1px solid grey;
+}
+
+.rightArrow {
+    color: white;
+    background-color: #f31131;
+    border: none;
+    padding: 1%;
+    border-radius: 50%;
+    font-size: 21px;
+}
+
+.vacationIdeas, .features {
+    font-family: serif;
+    width: 85%;
+    margin: 6% auto;
+    text-align: center;
+
+}
+
+.heading h1 {
+    text-align: center;
+    font-family: serif;
+    font-size: 45px;
+}
+
+.separator {
+    text-align: center;
+    padding: 2% 0%;
+}
+
+.ideasImages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ideas {
+    width: 31.5%;
+    position: relative;
+}
+
+.beachBtn, .groupBtn, .cityBtn {
+    position: absolute;
+    bottom: 16.5%;
+    left: 14%;
+    outline: 17px solid white;
+    font-size: 19px;
+    background-color: white;
+    border: 1px solid grey;
+    font-weight: 600;
+}
+
+.beachBtn {
+    padding: 5.5% 10%;
+}
+
+.groupBtn {
+    padding: 5.5% 16%;
+}
+
+.cityBtn {
+    padding: 5.5% 21%
+}
+
+.holidayLocations {
+    width: 85%;
+    margin: 6% auto;
+}
+
+.locationImage img {
+    width: 100%;
+    height: 100%;
+}
+
+.locationImage {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.locationCard, .featuresInnerContainer {
+    justify-content: space-between;
+}
+
+.locationInnerCard {
+    width: 49%;
+    margin: 1% 0%;
+}
+
+.smallImages, .locationInnerCard, .locationSpeciality, .locationCard, .featuresInnerContainer {
+    display: flex;
+}
+
+.leftImage, .rightImage, .midImage {
+    width: 33%;
+}
+
+.locationText {
+    background-color: white;
+    width: 50%;
+}
+
+.locationName, .locationNameResponsive {
+    font-size: 20px;
+    color: #171d1c;
+    font-weight: bold;
+    font-family: "Kepler Std";
+}
+
+.locationNameResponsive {
+    display: none;
+}
+
+.locationDesciption {
+    word-spacing: 3px;
+    font-size: 15px;
+    line-height: 22px;
+    color: #505050;
+    font-weight: 600;
+    word-break: break-all;
+    padding: 6% 0%;
+}
+
+.locationTextInnerContainer {
+    padding: 9% 5%;
+}
+
+.specialityIcons {
+    position: relative;
+    width: 21%;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 53%;
+}
+
+.specialityIcons .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.specialityIcons:hover .tooltip {
+    visibility: visible;
+}
+
+.locationSpeciality span {
+    margin-left: 10%;
+}
+
+.bookServiceNow {
+    margin: auto;
+}
+
+.bookNowBtn, .bookServiceNow {
+    background-color: #f31131;
+    border: none;
+    padding: 4% 8%;
+    color: white;
+    border-radius: 18px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 14%;
+}
+
+.icon img {
+    background-image: url(../images/icon_bg.png);
+    background-repeat: no-repeat;
+    border: none;
+    padding: 10% 8%;
+}
+
+.experience img {
+    padding: 8% 8%;
+}
+
+.featuresCard {
+    width: 30%;
+}
+
+.featureHeading {
+    padding: 4% 0%;
+}
+
+.featureDescription {
+    color: #585858;
+    font-family: sans-serif;
+    text-align: center;
+    word-spacing: 2px;
+    font-size: 14px;
+}
+
+.feedbackFormContainer {
+    background-image: url('../images/form_background.jpg');
+    background-repeat: no-repeat;
+}
+
+.emptySpace {
+    width: 85%;
+    height: 11rem;
+    margin: auto;
+}
+
+.feedbackFormInnerContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 73%;
+    margin: auto;
+    padding: 0%;
+}
+
+.feedbackForm {
+    background-color: white;
+    padding: 2%;
+    width: 31%;
+}
+
+.feedbackForm h2 {
+    width: 70%;
+    margin-bottom: 6%;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.feedbackForm input {
+    padding: 3% 0%;
+    font-size: 14px;
+    margin-top: 3%;
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: transparent;
+    display: flex;
+    width: 100%;
+}
+
+.send {
+    text-transform: uppercase;
+    color: white;
+    background-color: #f31131;
+    border: none;
+    border-radius: 50px;
+    padding: 4% 9%;
+    margin: 6rem 0rem 2rem 0rem;
+}
+
+.footerInnerContent, .leftFooter, .popularDestinationsList {
+    display: flex;
+}
+
+.footer {
+    background-color: #171d1c;
+    color: #cecece;
+}
+
+.footerInnerContent {
+    justify-content: space-between;
+    width: 85%;
+    margin: auto;
+    line-height: 21px;
+    padding: 3% 0%;
+}
+
+.leftFooter {
+    width: 60%;
+    justify-content: space-between;
+}
+
+.leftFooter h6 {
+    font-size: 16px;
+}
+
+.popularDestinations {
+    width: 32%;
+}
+
+.popularDestinationsList {
+    justify-content: space-between;
+}
+
+.leftFooter ul li {
+    list-style-type: none;
+    font-size: 12px;
+}
+
+.rightFooter {
+    display: flex;
+    margin-right: 8%;
+    text-align: right;
+    font-size: 12px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* hover effects */
+.navLinks a:hover {
+    cursor: pointer;
+    /* text-decoration: underline 2px solid black ; */
+    color: black;
+    font-weight: bold;
+    -webkit-text-stroke: 1px;
+}
+.selectOption:hover {
+    color: black;
+}
+button:hover {
+    background-color: #ff0022;
+    font-weight: bold;
+}
+.leftFooter ul li:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Media queries for mobile phones */
+
+@media (min-width:360px) and (max-width:576px) {
+    .homePage {
+        background-position: right 53% top 141%;
+    }
+
+    .navigation {
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+        content: "";
+        position: relative;
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        margin: 4%;
+        z-index: 2;
+    }
+
+    .hamburger:before, .hamburger:after {
+        position: absolute;
+        content: "";
+        background-color: black;
+        width: 30px;
+        height: 4px;
+        transition: all 0.5s;
+        left: 0px;
+    }
+
+    .hamburger:before {
+        top: -10px;
+        left: 0px;
+    }
+
+    .hamburger:after {
+        top: 10px;
+        left: 0px;
+    }
+
+    .navigation input:checked~.hamburger {
+        background-color: transparent;
+    }
+
+    .navigation input:checked~.hamburger:before {
+        top: 0;
+        width: 20px;
+        transform: rotate(-45deg);
+        background-color: white;
+    }
+
+    .navigation input:checked~.hamburger:after {
+        top: 0;
+        width: 20px;
+        transform: rotate(45deg);
+        background-color: white;
+    }
+
+    .navLinks {
+        right: 100%;
+    }
+
+    .navigation input:checked~.navLinks {
+        right: 0%;
+    }
+
+    .navLinks {
+        position: absolute;
+        width: 100%;
+        right: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(114, 194, 226, 0.788);
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .navLinks a {
+        color: white;
+        padding: 5%;
+        border-bottom: 1px solid rgb(211, 204, 204);
+    }
+
+    .homeText {
+        width: 85%;
+        font-size: 17px;
+    }
+
+    .emptySpace, .locationName, .bookingSection, .logo, .popularDestinations {
+        display: none;
+    }
+
+    .bookServiceNow {
+        display: block;
+    }
+
+    .logoResponsive {
+        display: block;
+        text-align: center;
+        padding: 2% 3%;
+        width: 32%;
+    }
+
+    .locationNameResponsive {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .ideas {
+        margin: 3% auto;
+        box-shadow: 0px 4px 4px 4px black;
+    }
+
+    .ideasImages, .locationCard, .locationInnerCard, .featuresInnerContainer {
+        flex-direction: column;
+    }
+
+    .selectOption, .ideasImages, .ideas, .locationImage, .locationText, .smallImages {
+        width: 100%;
+    }
+
+    .locationInnerCard {
+        width: 100%;
+        box-shadow: 0px 5px 5px 5px black;
+        margin: 5% 0%;
+
+    }
+
+    .featuresCard {
+        width: 100%;
+        box-shadow: 0px 3px 9px 4px;
+        margin: 4% 0%;
+    }
+
+    .featureDescription, .locationDesciption {
+        text-align: justify;
+    }
+
+    .icon img {
+        margin-top: 2%;
+    }
+
+    .featureDescription {
+        padding: 2%;
+    }
+
+    .feedbackFormInnerContainer {
+        width: 85%;
+        justify-content: center;
+    }
+
+    .feedbackForm {
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 5px 11px 5px;
+        margin: 7% 0%;
+    }
+
+    .feedbackForm h2 {
+        margin: 3% auto;
+    }
+
+    .feedbackForm input {
+        padding: 6% 3%;
+    }
+
+    .footerInnerContent, .leftFooter, .rightFooter {
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .leftFooter, .rightFooter {
+        margin: 6% auto;
+    }
+
+    .leftFooter h6, .rightFooter h6 {
+        margin: 2% auto;
+    }
+}
